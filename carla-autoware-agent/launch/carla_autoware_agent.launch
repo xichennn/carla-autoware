@@ -67,6 +67,19 @@
   </include>
 
   <!--
+    ####################
+    ## trajectory ## 
+    ####################
+  -->
+  <include file='$(find op_local_planner)/launch/op_common_params.launch'>
+  </include>
+  <include file='$(find op_local_planner)/launch/op_trajectory_generator.launch'>
+  </include>
+  <include file='$(find op_local_planner)/launch/op_trajectory_evaluator.launch'>
+  </include>
+
+  
+  <!--
     ###################
     ## Visualization ## 
     ###################
