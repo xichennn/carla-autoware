@@ -72,7 +72,10 @@
     Out: /green_waypoints_array [autoware_msgs::LaneArray]
     Out: /red_waypoints_array [autoware_msgs::LaneArray]
   -->
+  <group>
+  <remap from='/lane_waypoints_array' to='/local_weighted_trajectories' />
   <node pkg='lane_planner' type='lane_rule' name='lane_rule' />
+  </group>
 
   <!--
     # lane_stop #
