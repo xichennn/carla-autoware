@@ -65,7 +65,20 @@
     <arg name='use_ground_truth_detections' value='$(arg use_ground_truth_detections)'/>
     <arg name='use_manual_control' value='$(arg use_manual_control)'/>
   </include>
+  
+  <!--
+    ####################
+    ## trajectory ## 
+    ####################
+  -->
+  <include file='$(find op_local_planner)/launch/op_common_params.launch'>
+  </include>
+  <include file='$(find op_local_planner)/launch/op_trajectory_generator.launch'>
+  </include>
+  <include file='$(find op_local_planner)/launch/op_trajectory_evaluator.launch'>
+  </include>
 
+  
   <!--
     ###################
     ## Visualization ## 
